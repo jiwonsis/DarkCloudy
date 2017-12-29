@@ -91,6 +91,9 @@
                         <constraint firstAttribute="height" constant="44" id="rLH-3D-yvn"/>
                     </constraints>
                     <state key="normal" image="button-location-normal"/>
+                    <connections>
+                        <action selector="didTapLocationButton" destination="-1" eventType="touchUpInside" id="SO3-mh-tkh"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0Z-MW-ZM5">
                     <rect key="frame" x="458" y="4" width="44" height="44"/>
@@ -99,6 +102,9 @@
                         <constraint firstAttribute="width" constant="44" id="xvw-Kd-S57"/>
                     </constraints>
                     <state key="normal" image="button-settings-normal"/>
+                    <connections>
+                        <action selector="didTapSettingsButton" destination="-1" eventType="touchUpInside" id="WLJ-hx-Qlr"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAu-vk-Jvk">
                     <rect key="frame" x="60" y="8" width="390" height="26.5"/>

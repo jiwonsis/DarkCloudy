@@ -54,6 +54,7 @@ private extension RootViewViewController {
     
     func subViewClassing() {
         dayViewController = DayViewController()
+        dayViewController.delegate = self
         dayView.addSubview(dayViewController.view)
         resetLayout(targetView: dayView, addingView: dayViewController.view)
         
@@ -154,12 +155,46 @@ extension RootViewViewController: CLLocationManagerDelegate {
     }
 }
 
-extension RootViewViewController: WeekViewControllerDelegate {
-    func controllerDidRefresh(controller: WeekViewController) {
-        fetchWeatherData()
+extension RootViewViewController: DayViewControllerDelegate {
+    func controllerDidTapSettingsButton(controller: DayViewController) {
+        let settingViewController = SettingsViewController()
+        settingViewController.delegate = self
+        let navigationCotroller = UINavigationController(rootViewController: settingViewController)
+        
+        present(navigationCotroller, animated: true, completion: nil)
+    }
+    
+    func controllerDidTapLocationButton(controller: DayViewController) {
+        print("나중에")
     }
     
     
 }
+
+extension RootViewViewController: WeekViewControllerDelegate {
+    func controllerDidRefresh(controller: WeekViewController) {
+        fetchWeatherData()
+    }
+}
+
+extension RootViewViewController: SettingsViewControllerDelegate {
+    
+    func controllerDidChangeTimeNotation(controller: SettingsViewController) {
+        dayViewController.reloadData()
+        weekViewController.reloadData()
+    }
+    
+    func controllerDidChangeUnitsNotation(controller: SettingsViewController) {
+        dayViewController.reloadData()
+        weekViewController.reloadData()
+    }
+    
+    func controllerDidChangeTemperatureNotation(controller: SettingsViewController) {
+        dayViewController.reloadData()
+        weekViewController.reloadData()
+    }
+    
+}
+
 
 

@@ -1,5 +1,10 @@
 import UIKit
 
+protocol DayViewControllerDelegate {
+    func controllerDidTapSettingsButton(controller: DayViewController)
+    func controllerDidTapLocationButton(controller: DayViewController)
+}
+
 class DayViewController: WeatherViewController {
     
     // MARK: - Properties
@@ -9,6 +14,10 @@ class DayViewController: WeatherViewController {
     @IBOutlet var temperatureLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var iconImageView: UIImageView!
+    
+     // MARK: -
+    
+    var delegate: DayViewControllerDelegate?
     
     // MARK: -
     
@@ -25,14 +34,22 @@ class DayViewController: WeatherViewController {
         super.viewDidLoad()
     }
     
+    // MARK: - Public Interface
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
+    override func reloadData() {
+        updateView()
+    }
+    
+    @IBAction func didTapSettingsButton() {
+        delegate?.controllerDidTapSettingsButton(controller: self)
+    }
+    
+    @IBAction func didTapLocationButton() {
+        delegate?.controllerDidTapLocationButton(controller: self)
     }
 }
 
-extension DayViewController: ViewControllerAble {
+extension DayViewController {
     func setupView() {
         weatherDataContainer.addSubview(containerView)
         resetLayout(targetView: weatherDataContainer, addingView: containerView)
@@ -67,11 +84,23 @@ private extension DayViewController {
         
         descriptionLabel.text = weatherData.summary
         
-        let temperature = weatherData.temperature.toCelcius()
-        temperatureLabel.text = String(format: "%.1f °C", temperature)
+        let temperature = weatherData.temperature
+        switch UserDefaults.getTemperatureNotation() {
+        case .celsius:
+            temperatureLabel.text = String(format: "%.1f °C", temperature.toCelcius())
+        case .fahrenheit:
+            temperatureLabel.text = String(format: "%.1f °F", temperature)
+        }
         
-        let windSpeed = weatherData.windSpeed.toKPH()
-         windSpeedLabel.text = String(format: "%.f KPH", windSpeed)
+        
+        let windSpeed = weatherData.windSpeed
+        switch UserDefaults.getUnitsNotation() {
+        case .imperial:
+            windSpeedLabel.text = String(format: "%.f MPH", windSpeed)
+        case .metric:
+            windSpeedLabel.text = String(format: "%.f KPH", windSpeed.toKPH())
+        }
+        
         
         iconImageView.image = imageForIcon(withName: weatherData.icon)
     }
