@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RootViewViewController" customModule="DarkCloudy" customModuleProvider="target">
+            <connections>
+                <outlet property="dayView" destination="Ft5-Bd-sbS" id="a4h-QZ-MtP"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="weekView" destination="hlw-yt-vvh" id="kNI-xd-gIy"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ft5-Bd-sbS">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="iK3-CH-4V0"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="uXf-YW-WfM"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hlw-yt-vvh">
+                    <rect key="frame" x="0.0" y="200" width="414" height="536"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="hlw-yt-vvh" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="2bw-wd-cxI"/>
+                <constraint firstItem="Ft5-Bd-sbS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="3RF-Y6-Nk4"/>
+                <constraint firstItem="Ft5-Bd-sbS" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Gj1-cd-rBA"/>
+                <constraint firstItem="hlw-yt-vvh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Vp4-i2-NL5"/>
+                <constraint firstItem="Ft5-Bd-sbS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="XDW-jf-QtK"/>
+                <constraint firstItem="hlw-yt-vvh" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="c6H-QW-xu1"/>
+                <constraint firstItem="Ft5-Bd-sbS" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="jLs-Mz-GmA"/>
+                <constraint firstItem="Ft5-Bd-sbS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="mhQ-3E-L2M"/>
+                <constraint firstItem="hlw-yt-vvh" firstAttribute="top" secondItem="Ft5-Bd-sbS" secondAttribute="bottom" id="pGH-eW-mtX"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="33" y="53"/>
+        </view>
+    </objects>
+</document>

@@ -22,6 +22,10 @@ public struct JSONDecode {
     
     
     // MARK: - Initialization
+    static func decode<T: JSONDecodable>(data: Data) throws -> T {
+        let decoder = try JSONDecode(data: data)
+        return try T(decoder: decoder)
+    }
     
     public init(data: Data) throws {
         guard let JSONData = try JSONSerialization.jsonObject(with: data, options: []) as? JSON else {
