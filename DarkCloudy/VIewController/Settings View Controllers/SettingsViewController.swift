@@ -98,32 +98,31 @@ extension SettingsViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
+        var viewModel: SettingsRepresentable?
+        
         switch section {
         case .time:
             guard let timeNotaion = TimeNotation(rawValue: indexPath.row) else {
                 fatalError("Unexpected Index Path")
             }
             
-            let viewModel = SettingViewTimeViewModel(timeNotation: timeNotaion)
-            
-            cell.mainLabel.text = viewModel.text
-            cell.accessoryType = viewModel.accessoryType
+            viewModel = SettingsViewTimeViewModel(timeNotation: timeNotaion)
         case .unit:
             guard let unitsNotation = UnitsNotation(rawValue: indexPath.row) else {
                 fatalError("Unexpected Index Path")
             }
             
-            let viewModel = SettingViewUnitsViewModel(unitsNotation: unitsNotation)
-            
-            cell.mainLabel.text = viewModel.text
-            cell.accessoryType = viewModel.accessoryType
+            viewModel = SettingsViewUnitsViewModel(unitsNotation: unitsNotation)
         case .temperature:
             guard let temperatureNotation = TemperatureNotation(rawValue: indexPath.row) else {
                 fatalError("Unexpected Index Path")
             }
             
-            let viewModel = SettingViewTemperatureViewModel(temperatureNotation: temperatureNotation)
-            
+            viewModel = SettingsViewTemperatureViewModel(temperatureNotation: temperatureNotation)
+        }
+        
+        if let viewModel = viewModel {
+            // Configure Cell
             cell.mainLabel.text = viewModel.text
             cell.accessoryType = viewModel.accessoryType
         }

@@ -1,6 +1,6 @@
 import UIKit
 
-struct SettingViewTimeViewModel {
+struct SettingsViewTimeViewModel {
     
     let timeNotation: TimeNotation
     
@@ -21,5 +21,8 @@ struct SettingViewTimeViewModel {
         }
     }
     
+}
+
+extension SettingsViewTimeViewModel: SettingsRepresentable {
     
 }

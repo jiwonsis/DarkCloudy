@@ -1,6 +1,6 @@
 import UIKit
 
-struct SettingViewUnitsViewModel {
+struct SettingsViewUnitsViewModel {
     let unitsNotation: UnitsNotation
     
     var text: String {
@@ -19,4 +19,8 @@ struct SettingViewUnitsViewModel {
             return .none
         }
     }
+}
+
+extension SettingsViewUnitsViewModel: SettingsRepresentable {
+    
 }

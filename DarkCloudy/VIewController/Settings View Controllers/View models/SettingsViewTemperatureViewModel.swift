@@ -1,6 +1,6 @@
 import UIKit
 
-struct SettingViewTemperatureViewModel {
+struct SettingsViewTemperatureViewModel {
     let temperatureNotation: TemperatureNotation
     
     var text: String {
@@ -19,4 +19,8 @@ struct SettingViewTemperatureViewModel {
             return .none
         }
     }
+}
+
+extension SettingsViewTemperatureViewModel: SettingsRepresentable {
+    
 }
