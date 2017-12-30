@@ -12,6 +12,14 @@ class WeekViewCell: UITableViewCell {
         super.awakeFromNib()
         setupViewController()
     }
+    
+    func configure(viewModel: WeatherDayRepresentable) {
+        dayLabel.text = viewModel.day
+        dateLabel.text = viewModel.date
+        windSpeedLabel.text = viewModel.windSpeed
+        temperatureLabel.text = viewModel.temperature
+        iconImageView.image = viewModel.image
+    }
 }
 
 extension WeekViewCell {
@@ -23,6 +31,5 @@ extension WeekViewCell {
     static func reuseIdetifier() -> String {
         return "WeekViewCell"
     }
-    
     
 }

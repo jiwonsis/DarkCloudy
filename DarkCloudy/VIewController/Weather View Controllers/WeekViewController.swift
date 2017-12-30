@@ -86,18 +86,14 @@ extension WeekViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: WeekViewCell.reuseIdetifier(), for: indexPath) as? WeekViewCell else {
             return UITableViewCell()
         }
-        guard let viewModel = viewModel else {
+        guard let viewModel = viewModel?.viewModel(for: indexPath.row) else {
             
             return UITableViewCell()
             
         }
         
         // Configure Cell
-        cell.dayLabel.text = viewModel.day(index: indexPath.row)
-        cell.dateLabel.text = viewModel.time(index: indexPath.row)
-        cell.temperatureLabel.text = viewModel.temperature(index: indexPath.row)
-        cell.windSpeedLabel.text = viewModel.temperature(index: indexPath.row)
-        cell.iconImageView.image = viewModel.image(index: indexPath.row)
+        cell.configure(viewModel: viewModel)
         
         return cell
     }
