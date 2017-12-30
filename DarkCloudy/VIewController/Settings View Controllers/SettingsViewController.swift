@@ -123,8 +123,7 @@ extension SettingsViewController: UITableViewDataSource {
         
         if let viewModel = viewModel {
             // Configure Cell
-            cell.mainLabel.text = viewModel.text
-            cell.accessoryType = viewModel.accessoryType
+            cell.configure(viewModel: viewModel)
         }
         
         return cell

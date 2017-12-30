@@ -22,6 +22,11 @@ class SettingViewCell: UITableViewCell {
         setupViewController()
     }
     
+    func configure(viewModel: SettingsRepresentable) {
+        mainLabel.text = viewModel.text
+        accessoryType = viewModel.accessoryType
+    }
+    
 }
 
 extension SettingViewCell {
