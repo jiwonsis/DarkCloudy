@@ -61,6 +61,16 @@ private extension SettingsViewController {
         case unit
         case temperature
         
+        
+        // MARK: - Properties
+        var title: String {
+            switch self {
+            case .time: return "Time"
+            case .unit: return "Unit"
+            case .temperature: return "Temperature"
+            }
+        }
+        
         var numberOfRows: Int {
             return 2
         }
@@ -119,16 +129,8 @@ extension SettingsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        guard let section  = Section(rawValue: section) else { return "" }
-        
-        switch  section {
-        case .time:
-            return "Time"
-        case .unit:
-            return "Unit"
-        case .temperature:
-            return "Temperature"
-        }
+        guard let section = Section(rawValue: section) else { fatalError("Unexpected Section") }
+        return section.title
     }
 }
 

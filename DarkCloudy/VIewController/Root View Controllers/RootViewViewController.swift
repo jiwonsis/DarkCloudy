@@ -165,7 +165,12 @@ extension RootViewViewController: DayViewControllerDelegate {
     }
     
     func controllerDidTapLocationButton(controller: DayViewController) {
-        print("나중에")
+        let locationsViewController = LocationsViewController()
+        locationsViewController.delegate = self
+        locationsViewController.currentLocation = currentLocation
+        let navigationCotroller = UINavigationController(rootViewController: locationsViewController)
+        
+        present(navigationCotroller, animated: true, completion: nil)
     }
     
     
@@ -196,5 +201,13 @@ extension RootViewViewController: SettingsViewControllerDelegate {
     
 }
 
+extension RootViewViewController: LocationsViewControllerDelegate {
+    func controller(_ controller: LocationsViewController, didSelectLocation location: CLLocation) {
+        // Update Current Location
+        currentLocation = location
+    }
+    
+    
+}
 
 

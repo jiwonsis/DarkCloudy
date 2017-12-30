@@ -121,7 +121,7 @@ extension WeekViewController: UITableViewDataSource {
         }
         let min = String(format: "%.0f°", temperatureMin)
         let max = String(format: "%.0f°", temperatureMax)
-        cell.temperatureLabel.text = "\(min) ~ \(max)"
+        cell.temperatureLabel.text = "\(min) / \(max)"
         
         
         let windSpeed = weatherData.windSpeed

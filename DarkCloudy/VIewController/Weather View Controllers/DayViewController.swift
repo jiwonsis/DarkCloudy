@@ -9,7 +9,7 @@ class DayViewController: WeatherViewController {
     
     // MARK: - Properties
     @IBOutlet var dateLabel: UILabel!
-    @IBOutlet var cityLabel: UILabel!
+    @IBOutlet var timeLabel: UILabel!
     @IBOutlet var windSpeedLabel: UILabel!
     @IBOutlet var temperatureLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
@@ -80,7 +80,15 @@ private extension DayViewController {
         dateFormatter.dateFormat = "EEE, MMMM d"
         dateLabel.text = dateFormatter.string(from: weatherData.time)
         
-        cityLabel.text = weatherData.city
+        let timeFormatter = DateFormatter()
+        
+        if UserDefaults.getTimeNotation() == .twelveHour {
+            timeFormatter.dateFormat = "hh:mm a"
+        } else {
+            timeFormatter.dateFormat = "HH:mm"
+        }
+        
+        timeLabel.text = timeFormatter.string(from: weatherData.time)
         
         descriptionLabel.text = weatherData.summary
         

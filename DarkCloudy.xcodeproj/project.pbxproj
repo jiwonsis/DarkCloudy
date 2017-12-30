@@ -31,6 +31,15 @@
 		34B9E8CF1FF6AE35000BE0E1 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34B9E8CD1FF6AE35000BE0E1 /* SettingsViewController.xib */; };
 		34B9E8D31FF6AE53000BE0E1 /* SettingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B9E8D11FF6AE53000BE0E1 /* SettingViewCell.swift */; };
 		34B9E8D41FF6AE53000BE0E1 /* SettingViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34B9E8D21FF6AE53000BE0E1 /* SettingViewCell.xib */; };
+		34B9E8D81FF6C7D4000BE0E1 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B9E8D61FF6C7D4000BE0E1 /* LocationsViewController.swift */; };
+		34B9E8D91FF6C7D4000BE0E1 /* LocationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34B9E8D71FF6C7D4000BE0E1 /* LocationsViewController.xib */; };
+		34B9E8DD1FF6C825000BE0E1 /* LocationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B9E8DB1FF6C825000BE0E1 /* LocationViewCell.swift */; };
+		34B9E8DE1FF6C825000BE0E1 /* LocationViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34B9E8DC1FF6C825000BE0E1 /* LocationViewCell.xib */; };
+		34B9E8E11FF6CA97000BE0E1 /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B9E8DF1FF6CA97000BE0E1 /* AddLocationViewController.swift */; };
+		34B9E8E21FF6CA97000BE0E1 /* AddLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34B9E8E01FF6CA97000BE0E1 /* AddLocationViewController.xib */; };
+		34B9E8E51FF75E8A000BE0E1 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B9E8E41FF75E8A000BE0E1 /* Location.swift */; };
+		34B9E8E81FF7BFAB000BE0E1 /* LocationRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B9E8E71FF7BFAB000BE0E1 /* LocationRepresentable.swift */; };
+		34B9E8EB1FF7C2B2000BE0E1 /* LocationsViewLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B9E8EA1FF7C2B2000BE0E1 /* LocationsViewLocationViewModel.swift */; };
 		34D68EA51FF4E4FC00D3B178 /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D68EA41FF4E4FC00D3B178 /* JSONDecodable.swift */; };
 		34D68EA71FF4E54700D3B178 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D68EA61FF4E54700D3B178 /* WeatherData.swift */; };
 /* End PBXBuildFile section */
@@ -74,6 +83,15 @@
 		34B9E8CD1FF6AE35000BE0E1 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		34B9E8D11FF6AE53000BE0E1 /* SettingViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewCell.swift; sourceTree = "<group>"; };
 		34B9E8D21FF6AE53000BE0E1 /* SettingViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewCell.xib; sourceTree = "<group>"; };
+		34B9E8D61FF6C7D4000BE0E1 /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
+		34B9E8D71FF6C7D4000BE0E1 /* LocationsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationsViewController.xib; sourceTree = "<group>"; };
+		34B9E8DB1FF6C825000BE0E1 /* LocationViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewCell.swift; sourceTree = "<group>"; };
+		34B9E8DC1FF6C825000BE0E1 /* LocationViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationViewCell.xib; sourceTree = "<group>"; };
+		34B9E8DF1FF6CA97000BE0E1 /* AddLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
+		34B9E8E01FF6CA97000BE0E1 /* AddLocationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddLocationViewController.xib; sourceTree = "<group>"; };
+		34B9E8E41FF75E8A000BE0E1 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		34B9E8E71FF7BFAB000BE0E1 /* LocationRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRepresentable.swift; sourceTree = "<group>"; };
+		34B9E8EA1FF7C2B2000BE0E1 /* LocationsViewLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewLocationViewModel.swift; sourceTree = "<group>"; };
 		34D68EA41FF4E4FC00D3B178 /* JSONDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecodable.swift; sourceTree = "<group>"; };
 		34D68EA61FF4E54700D3B178 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,6 +177,7 @@
 		34AD7FBD1FF3DEEF00CA8D85 /* VIewController */ = {
 			isa = PBXGroup;
 			children = (
+				34B9E8D51FF6C7BC000BE0E1 /* Location View Controller */,
 				34B9E8CB1FF6AE14000BE0E1 /* Settings View Controllers */,
 				34B9E8B71FF4EAB7000BE0E1 /* Weather View Controllers */,
 				34B9E8B61FF4EA80000BE0E1 /* Root View Controllers */,
@@ -243,11 +262,59 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		34B9E8D51FF6C7BC000BE0E1 /* Location View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				34B9E8E91FF7C294000BE0E1 /* View models */,
+				34B9E8E61FF7BF96000BE0E1 /* protocols */,
+				34B9E8DA1FF6C805000BE0E1 /* Cells */,
+				34B9E8D61FF6C7D4000BE0E1 /* LocationsViewController.swift */,
+				34B9E8D71FF6C7D4000BE0E1 /* LocationsViewController.xib */,
+				34B9E8E31FF6CBFC000BE0E1 /* Add Location View Controller */,
+			);
+			path = "Location View Controller";
+			sourceTree = "<group>";
+		};
+		34B9E8DA1FF6C805000BE0E1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				34B9E8DB1FF6C825000BE0E1 /* LocationViewCell.swift */,
+				34B9E8DC1FF6C825000BE0E1 /* LocationViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		34B9E8E31FF6CBFC000BE0E1 /* Add Location View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				34B9E8DF1FF6CA97000BE0E1 /* AddLocationViewController.swift */,
+				34B9E8E01FF6CA97000BE0E1 /* AddLocationViewController.xib */,
+			);
+			path = "Add Location View Controller";
+			sourceTree = "<group>";
+		};
+		34B9E8E61FF7BF96000BE0E1 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				34B9E8E71FF7BFAB000BE0E1 /* LocationRepresentable.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		34B9E8E91FF7C294000BE0E1 /* View models */ = {
+			isa = PBXGroup;
+			children = (
+				34B9E8EA1FF7C2B2000BE0E1 /* LocationsViewLocationViewModel.swift */,
+			);
+			path = "View models";
+			sourceTree = "<group>";
+		};
 		34D68EA21FF4E4DB00D3B178 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				34D68EA61FF4E54700D3B178 /* WeatherData.swift */,
 				34B9E8C41FF510AF000BE0E1 /* WeatherDayData.swift */,
+				34B9E8E41FF75E8A000BE0E1 /* Location.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -348,8 +415,11 @@
 				34AD7FC11FF3DEFF00CA8D85 /* RootViewViewController.xib in Resources */,
 				34AD7FDD1FF3E52F00CA8D85 /* DayViewController.xib in Resources */,
 				34AD7FE11FF3E55100CA8D85 /* WeekViewController.xib in Resources */,
+				34B9E8DE1FF6C825000BE0E1 /* LocationViewCell.xib in Resources */,
 				34B9E8D41FF6AE53000BE0E1 /* SettingViewCell.xib in Resources */,
 				34B9E8CF1FF6AE35000BE0E1 /* SettingsViewController.xib in Resources */,
+				34B9E8E21FF6CA97000BE0E1 /* AddLocationViewController.xib in Resources */,
+				34B9E8D91FF6C7D4000BE0E1 /* LocationsViewController.xib in Resources */,
 				34AD7FA21FF3DE8600CA8D85 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,16 +445,22 @@
 				34D68EA71FF4E54700D3B178 /* WeatherData.swift in Sources */,
 				34B9E8C51FF510AF000BE0E1 /* WeatherDayData.swift in Sources */,
 				34B9E8C31FF50268000BE0E1 /* UIViewController+DarkCloudy.swift in Sources */,
+				34B9E8E11FF6CA97000BE0E1 /* AddLocationViewController.swift in Sources */,
 				34B9E8CE1FF6AE35000BE0E1 /* SettingsViewController.swift in Sources */,
 				34B9E8C81FF512FA000BE0E1 /* UserDefaults+DarkCloudy.swift in Sources */,
 				34AD7FEE1FF3EFA300CA8D85 /* Configuration.swift in Sources */,
 				34AD7F9B1FF3DE8600CA8D85 /* AppDelegate.swift in Sources */,
 				34B9E8CA1FF5139E000BE0E1 /* UnitConversion+DarkCloudy.swift in Sources */,
+				34B9E8E51FF75E8A000BE0E1 /* Location.swift in Sources */,
+				34B9E8DD1FF6C825000BE0E1 /* LocationViewCell.swift in Sources */,
 				34D68EA51FF4E4FC00D3B178 /* JSONDecodable.swift in Sources */,
 				34B9E8D31FF6AE53000BE0E1 /* SettingViewCell.swift in Sources */,
 				34AD7FC01FF3DEFF00CA8D85 /* RootViewViewController.swift in Sources */,
+				34B9E8D81FF6C7D4000BE0E1 /* LocationsViewController.swift in Sources */,
+				34B9E8E81FF7BFAB000BE0E1 /* LocationRepresentable.swift in Sources */,
 				34AD7FF11FF3F0BA00CA8D85 /* DataManager.swift in Sources */,
 				34AD7FDC1FF3E52F00CA8D85 /* DayViewController.swift in Sources */,
+				34B9E8EB1FF7C2B2000BE0E1 /* LocationsViewLocationViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,7 +612,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = git.scottmoon.DarkCloudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -551,7 +627,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = git.scottmoon.DarkCloudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

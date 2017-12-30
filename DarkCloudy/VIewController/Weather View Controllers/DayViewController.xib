@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -13,13 +13,13 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DayViewController" customModule="DarkCloudy" customModuleProvider="target">
             <connections>
                 <outlet property="activityIndicatorView" destination="LVO-YA-hrX" id="RmX-kv-Np8"/>
-                <outlet property="cityLabel" destination="tu8-1C-5j0" id="DF3-Uc-5Me"/>
                 <outlet property="containerView" destination="i5M-Pr-FkT" id="GMq-6b-Fkx"/>
                 <outlet property="dateLabel" destination="gAu-vk-Jvk" id="DRG-px-NDO"/>
                 <outlet property="descriptionLabel" destination="Chp-ga-K4n" id="9pA-wv-c05"/>
                 <outlet property="iconImageView" destination="Leg-3N-dOQ" id="B4B-yI-NBJ"/>
                 <outlet property="messageLabel" destination="r54-dh-xl9" id="ahv-5D-xcQ"/>
                 <outlet property="temperatureLabel" destination="9M2-Ik-w5b" id="AF3-KP-jIC"/>
+                <outlet property="timeLabel" destination="tu8-1C-5j0" id="3EA-DW-X1i"/>
                 <outlet property="view" destination="9Fn-9W-9Ir" id="A1L-z1-XGy"/>
                 <outlet property="weatherDataContainer" destination="KqQ-aE-sZq" id="5a0-4z-s19"/>
                 <outlet property="windSpeedLabel" destination="XgG-Yl-Q1W" id="NGV-Zq-chg"/>
@@ -81,7 +81,7 @@
             <point key="canvasLocation" x="-416.5" y="54"/>
         </view>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="506" height="200"/>
+            <rect key="frame" x="0.0" y="0.0" width="551" height="202"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5V-Ty-olq">
@@ -96,7 +96,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0Z-MW-ZM5">
-                    <rect key="frame" x="458" y="4" width="44" height="44"/>
+                    <rect key="frame" x="503" y="4" width="44" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="kCO-Ug-SBU"/>
                         <constraint firstAttribute="width" constant="44" id="xvw-Kd-S57"/>
@@ -107,37 +107,37 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAu-vk-Jvk">
-                    <rect key="frame" x="60" y="8" width="390" height="26.5"/>
+                    <rect key="frame" x="60" y="8.0000000000000018" width="435" height="26.666666666666671"/>
                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
                     <color key="textColor" red="1" green="0.37254902719999999" blue="0.35686275360000003" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tu8-1C-5j0">
-                    <rect key="frame" x="60" y="34.5" width="390" height="18"/>
+                    <rect key="frame" x="60" y="34.666666666666664" width="435" height="18"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9M2-Ik-w5b">
-                    <rect key="frame" x="8" y="92" width="207" height="21"/>
+                    <rect key="frame" x="8" y="92" width="229.66666666666666" height="21"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XgG-Yl-Q1W">
-                    <rect key="frame" x="291" y="92" width="207" height="21"/>
+                    <rect key="frame" x="313.66666666666669" y="92" width="229.33333333333331" height="21"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Chp-ga-K4n">
-                    <rect key="frame" x="20" y="133" width="466" height="60"/>
+                    <rect key="frame" x="20" y="133" width="511" height="62"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Leg-3N-dOQ">
-                    <rect key="frame" x="223" y="72.5" width="60" height="60"/>
+                    <rect key="frame" x="245.66666666666663" y="72.666666666666671" width="60" height="60.000000000000014"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="60" id="qbO-G1-ES3"/>
                         <constraint firstAttribute="height" constant="60" id="sTC-T2-Iiv"/>
@@ -172,7 +172,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="103" y="54"/>
+            <point key="canvasLocation" x="130.5" y="55"/>
         </view>
     </objects>
     <resources>
