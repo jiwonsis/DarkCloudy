@@ -100,29 +100,32 @@ extension SettingsViewController: UITableViewDataSource {
         
         switch section {
         case .time:
-            cell.mainLabel.text = (indexPath.row == 0) ? "12 Hour" : "24 Hour"
-            let timeNotation = UserDefaults.getTimeNotation()
-            if indexPath.row == timeNotation.rawValue {
-                cell.accessoryType = .checkmark
-            } else {
-                cell.accessoryType = .none
+            guard let timeNotaion = TimeNotation(rawValue: indexPath.row) else {
+                fatalError("Unexpected Index Path")
             }
+            
+            let viewModel = SettingViewTimeViewModel(timeNotation: timeNotaion)
+            
+            cell.mainLabel.text = viewModel.text
+            cell.accessoryType = viewModel.accessoryType
         case .unit:
-            cell.mainLabel.text = (indexPath.row == 0) ? "Imperial" : "Metric"
-            let unitsNotation = UserDefaults.getUnitsNotation()
-            if indexPath.row == unitsNotation.rawValue {
-                cell.accessoryType = .checkmark
-            } else {
-                cell.accessoryType = .none
+            guard let unitsNotation = UnitsNotation(rawValue: indexPath.row) else {
+                fatalError("Unexpected Index Path")
             }
+            
+            let viewModel = SettingViewUnitsViewModel(unitsNotation: unitsNotation)
+            
+            cell.mainLabel.text = viewModel.text
+            cell.accessoryType = viewModel.accessoryType
         case .temperature:
-            cell.mainLabel.text = (indexPath.row == 0) ? "Fahrenheit" : "Celcius"
-            let temperatureNotation = UserDefaults.getTemperatureNotation()
-            if indexPath.row == temperatureNotation.rawValue {
-                cell.accessoryType = .checkmark
-            } else {
-                cell.accessoryType = .none
+            guard let temperatureNotation = TemperatureNotation(rawValue: indexPath.row) else {
+                fatalError("Unexpected Index Path")
             }
+            
+            let viewModel = SettingViewTemperatureViewModel(temperatureNotation: temperatureNotation)
+            
+            cell.mainLabel.text = viewModel.text
+            cell.accessoryType = viewModel.accessoryType
         }
         
         return cell
