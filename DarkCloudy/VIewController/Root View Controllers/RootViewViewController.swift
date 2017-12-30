@@ -83,7 +83,7 @@ private extension RootViewViewController {
             
             // Configure Week View Controller
             
-            self.weekViewController.week = response.dailyData
+            self.weekViewController.viewModel = WeekViewViewModel(weatherData: response.dailyData)
         }
     }
     
