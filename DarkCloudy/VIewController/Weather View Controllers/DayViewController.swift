@@ -21,7 +21,7 @@ class DayViewController: WeatherViewController {
     
     // MARK: -
     
-    var now: WeatherData? {
+    var viewModel: DayViewViewModel? {
         didSet {
             updateView()
         }
@@ -63,53 +63,24 @@ private extension DayViewController {
         DispatchQueue.main.async {
             self.activityIndicatorView.stopAnimating()
             
-            guard let now = self.now else {
+            guard let viewModel = self.viewModel else {
                 self.messageLabel.isHidden = false
                 self.messageLabel.text = "Cloudy was unable to fetch weather data."
                 return
             }
-            self.updateWeatherDataContainer(weatherData: now)
+            self.updateWeatherDataContainer(viewModel: viewModel)
         }
         
     }
     
-    func updateWeatherDataContainer(weatherData: WeatherData) {
+    func updateWeatherDataContainer(viewModel: DayViewViewModel) {
         weatherDataContainer.isHidden = false
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "EEE, MMMM d"
-        dateLabel.text = dateFormatter.string(from: weatherData.time)
-        
-        let timeFormatter = DateFormatter()
-        
-        if UserDefaults.getTimeNotation() == .twelveHour {
-            timeFormatter.dateFormat = "hh:mm a"
-        } else {
-            timeFormatter.dateFormat = "HH:mm"
-        }
-        
-        timeLabel.text = timeFormatter.string(from: weatherData.time)
-        
-        descriptionLabel.text = weatherData.summary
-        
-        let temperature = weatherData.temperature
-        switch UserDefaults.getTemperatureNotation() {
-        case .celsius:
-            temperatureLabel.text = String(format: "%.1f °C", temperature.toCelcius())
-        case .fahrenheit:
-            temperatureLabel.text = String(format: "%.1f °F", temperature)
-        }
-        
-        
-        let windSpeed = weatherData.windSpeed
-        switch UserDefaults.getUnitsNotation() {
-        case .imperial:
-            windSpeedLabel.text = String(format: "%.f MPH", windSpeed)
-        case .metric:
-            windSpeedLabel.text = String(format: "%.f KPH", windSpeed.toKPH())
-        }
-        
-        
-        iconImageView.image = imageForIcon(withName: weatherData.icon)
+        dateLabel.text = viewModel.date
+        timeLabel.text = viewModel.time
+        descriptionLabel.text = viewModel.summery
+        temperatureLabel.text = viewModel.temperature
+        windSpeedLabel.text = viewModel.windSpeed
+        iconImageView.image = viewModel.image
     }
 }

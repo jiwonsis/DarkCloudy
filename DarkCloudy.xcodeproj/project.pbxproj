@@ -40,6 +40,8 @@
 		34B9E8E51FF75E8A000BE0E1 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B9E8E41FF75E8A000BE0E1 /* Location.swift */; };
 		34B9E8E81FF7BFAB000BE0E1 /* LocationRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B9E8E71FF7BFAB000BE0E1 /* LocationRepresentable.swift */; };
 		34B9E8EB1FF7C2B2000BE0E1 /* LocationsViewLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B9E8EA1FF7C2B2000BE0E1 /* LocationsViewLocationViewModel.swift */; };
+		34B9E8EE1FF845B8000BE0E1 /* DayViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B9E8ED1FF845B8000BE0E1 /* DayViewViewModel.swift */; };
+		34B9E8F01FF8484A000BE0E1 /* UIImage+DarkCloudy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B9E8EF1FF8484A000BE0E1 /* UIImage+DarkCloudy.swift */; };
 		34D68EA51FF4E4FC00D3B178 /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D68EA41FF4E4FC00D3B178 /* JSONDecodable.swift */; };
 		34D68EA71FF4E54700D3B178 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D68EA61FF4E54700D3B178 /* WeatherData.swift */; };
 /* End PBXBuildFile section */
@@ -92,6 +94,8 @@
 		34B9E8E41FF75E8A000BE0E1 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		34B9E8E71FF7BFAB000BE0E1 /* LocationRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRepresentable.swift; sourceTree = "<group>"; };
 		34B9E8EA1FF7C2B2000BE0E1 /* LocationsViewLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewLocationViewModel.swift; sourceTree = "<group>"; };
+		34B9E8ED1FF845B8000BE0E1 /* DayViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewViewModel.swift; sourceTree = "<group>"; };
+		34B9E8EF1FF8484A000BE0E1 /* UIImage+DarkCloudy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+DarkCloudy.swift"; sourceTree = "<group>"; };
 		34D68EA41FF4E4FC00D3B178 /* JSONDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecodable.swift; sourceTree = "<group>"; };
 		34D68EA61FF4E54700D3B178 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -213,6 +217,7 @@
 		34B9E8B71FF4EAB7000BE0E1 /* Weather View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				34B9E8EC1FF8458B000BE0E1 /* ViewModels */,
 				34B9E8B81FF4EF7B000BE0E1 /* Cells */,
 				34AD7FDA1FF3E52F00CA8D85 /* DayViewController.swift */,
 				34AD7FDB1FF3E52F00CA8D85 /* DayViewController.xib */,
@@ -239,6 +244,7 @@
 				34B9E8C21FF50268000BE0E1 /* UIViewController+DarkCloudy.swift */,
 				34B9E8C71FF512FA000BE0E1 /* UserDefaults+DarkCloudy.swift */,
 				34B9E8C91FF5139E000BE0E1 /* UnitConversion+DarkCloudy.swift */,
+				34B9E8EF1FF8484A000BE0E1 /* UIImage+DarkCloudy.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -307,6 +313,14 @@
 				34B9E8EA1FF7C2B2000BE0E1 /* LocationsViewLocationViewModel.swift */,
 			);
 			path = "View models";
+			sourceTree = "<group>";
+		};
+		34B9E8EC1FF8458B000BE0E1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				34B9E8ED1FF845B8000BE0E1 /* DayViewViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		34D68EA21FF4E4DB00D3B178 /* Models */ = {
@@ -452,6 +466,7 @@
 				34AD7F9B1FF3DE8600CA8D85 /* AppDelegate.swift in Sources */,
 				34B9E8CA1FF5139E000BE0E1 /* UnitConversion+DarkCloudy.swift in Sources */,
 				34B9E8E51FF75E8A000BE0E1 /* Location.swift in Sources */,
+				34B9E8EE1FF845B8000BE0E1 /* DayViewViewModel.swift in Sources */,
 				34B9E8DD1FF6C825000BE0E1 /* LocationViewCell.swift in Sources */,
 				34D68EA51FF4E4FC00D3B178 /* JSONDecodable.swift in Sources */,
 				34B9E8D31FF6AE53000BE0E1 /* SettingViewCell.swift in Sources */,
@@ -459,6 +474,7 @@
 				34B9E8D81FF6C7D4000BE0E1 /* LocationsViewController.swift in Sources */,
 				34B9E8E81FF7BFAB000BE0E1 /* LocationRepresentable.swift in Sources */,
 				34AD7FF11FF3F0BA00CA8D85 /* DataManager.swift in Sources */,
+				34B9E8F01FF8484A000BE0E1 /* UIImage+DarkCloudy.swift in Sources */,
 				34AD7FDC1FF3E52F00CA8D85 /* DayViewController.swift in Sources */,
 				34B9E8EB1FF7C2B2000BE0E1 /* LocationsViewLocationViewModel.swift in Sources */,
 			);

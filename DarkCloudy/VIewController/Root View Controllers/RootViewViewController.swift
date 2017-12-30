@@ -79,7 +79,7 @@ private extension RootViewViewController {
             
             // Configure Day View Controller
             
-            self.dayViewController.now = response
+            self.dayViewController.viewModel = DayViewViewModel(weatherData: response)
             
             // Configure Week View Controller
             
