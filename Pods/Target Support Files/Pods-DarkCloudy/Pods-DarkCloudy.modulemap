@@ -1,6 +1,0 @@
-framework module Pods_DarkCloudy {
-  umbrella header "Pods-DarkCloudy-umbrella.h"
-
-  export *
-  module * { export * }
-}

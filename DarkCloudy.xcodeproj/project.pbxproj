@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3428CBEF1FF8FD0F00F12046 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3428CBED1FF8FD0F00F12046 /* RxCocoa.framework */; };
+		3428CBF01FF8FD0F00F12046 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3428CBEE1FF8FD0F00F12046 /* RxSwift.framework */; };
+		3428CBF31FF8FD4800F12046 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3428CBF11FF8FD4800F12046 /* RxTest.framework */; };
+		3428CBF41FF8FD4800F12046 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3428CBF21FF8FD4800F12046 /* RxBlocking.framework */; };
 		34AD7F9B1FF3DE8600CA8D85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AD7F9A1FF3DE8600CA8D85 /* AppDelegate.swift */; };
 		34AD7FA21FF3DE8600CA8D85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34AD7FA11FF3DE8600CA8D85 /* Assets.xcassets */; };
 		34AD7FA51FF3DE8600CA8D85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34AD7FA31FF3DE8600CA8D85 /* LaunchScreen.storyboard */; };
@@ -59,8 +63,6 @@
 		34D68EA71FF4E54700D3B178 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D68EA61FF4E54700D3B178 /* WeatherData.swift */; };
 		34E90A221FF8D2E400DD2B81 /* WeatherDayViewViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E90A211FF8D2E400DD2B81 /* WeatherDayViewViewModelTests.swift */; };
 		34E90A251FF8DAD100DD2B81 /* AddLocationViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E90A241FF8DAD100DD2B81 /* AddLocationViewViewModel.swift */; };
-		92AF228842F89B684AF46511 /* Pods_DarkCloudyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37853764BC5197B1561F582E /* Pods_DarkCloudyTests.framework */; };
-		C0F79EEBBD4AFE87B918F44E /* Pods_DarkCloudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56FCDA5402AD5FE643E2CF93 /* Pods_DarkCloudy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +76,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0923B3A2FCDDD7789C9C5353 /* Pods-DarkCloudyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DarkCloudyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DarkCloudyTests/Pods-DarkCloudyTests.release.xcconfig"; sourceTree = "<group>"; };
+		3428CBED1FF8FD0F00F12046 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		3428CBEE1FF8FD0F00F12046 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		3428CBF11FF8FD4800F12046 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
+		3428CBF21FF8FD4800F12046 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 		34AD7F971FF3DE8600CA8D85 /* DarkCloudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DarkCloudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34AD7F9A1FF3DE8600CA8D85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34AD7FA11FF3DE8600CA8D85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -131,11 +136,6 @@
 		34D68EA61FF4E54700D3B178 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		34E90A211FF8D2E400DD2B81 /* WeatherDayViewViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDayViewViewModelTests.swift; sourceTree = "<group>"; };
 		34E90A241FF8DAD100DD2B81 /* AddLocationViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewViewModel.swift; sourceTree = "<group>"; };
-		37853764BC5197B1561F582E /* Pods_DarkCloudyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DarkCloudyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		56FCDA5402AD5FE643E2CF93 /* Pods_DarkCloudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DarkCloudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF4040A42F46CCF4D568200E /* Pods-DarkCloudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DarkCloudy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DarkCloudy/Pods-DarkCloudy.debug.xcconfig"; sourceTree = "<group>"; };
-		C50793162B3B3E3A3208A356 /* Pods-DarkCloudyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DarkCloudyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DarkCloudyTests/Pods-DarkCloudyTests.debug.xcconfig"; sourceTree = "<group>"; };
-		C880842CB568D4647E0986A4 /* Pods-DarkCloudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DarkCloudy.release.xcconfig"; path = "Pods/Target Support Files/Pods-DarkCloudy/Pods-DarkCloudy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,7 +143,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0F79EEBBD4AFE87B918F44E /* Pods_DarkCloudy.framework in Frameworks */,
+				3428CBEF1FF8FD0F00F12046 /* RxCocoa.framework in Frameworks */,
+				3428CBF01FF8FD0F00F12046 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,21 +152,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92AF228842F89B684AF46511 /* Pods_DarkCloudyTests.framework in Frameworks */,
+				3428CBF31FF8FD4800F12046 /* RxTest.framework in Frameworks */,
+				3428CBF41FF8FD4800F12046 /* RxBlocking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3428CBEC1FF8FD0E00F12046 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3428CBF21FF8FD4800F12046 /* RxBlocking.framework */,
+				3428CBF11FF8FD4800F12046 /* RxTest.framework */,
+				3428CBED1FF8FD0F00F12046 /* RxCocoa.framework */,
+				3428CBEE1FF8FD0F00F12046 /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		34AD7F8E1FF3DE8600CA8D85 = {
 			isa = PBXGroup;
 			children = (
 				34AD7F991FF3DE8600CA8D85 /* DarkCloudy */,
 				34AD7FAE1FF3DE8600CA8D85 /* DarkCloudyTests */,
 				34AD7F981FF3DE8600CA8D85 /* Products */,
-				EA4F07136D82551B7C3A16AB /* Pods */,
-				A5E77588D4C030AEDF58D290 /* Frameworks */,
+				3428CBEC1FF8FD0E00F12046 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -462,26 +474,6 @@
 			path = "View Models";
 			sourceTree = "<group>";
 		};
-		A5E77588D4C030AEDF58D290 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				56FCDA5402AD5FE643E2CF93 /* Pods_DarkCloudy.framework */,
-				37853764BC5197B1561F582E /* Pods_DarkCloudyTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		EA4F07136D82551B7C3A16AB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				AF4040A42F46CCF4D568200E /* Pods-DarkCloudy.debug.xcconfig */,
-				C880842CB568D4647E0986A4 /* Pods-DarkCloudy.release.xcconfig */,
-				C50793162B3B3E3A3208A356 /* Pods-DarkCloudyTests.debug.xcconfig */,
-				0923B3A2FCDDD7789C9C5353 /* Pods-DarkCloudyTests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -489,12 +481,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 34AD7FB41FF3DE8600CA8D85 /* Build configuration list for PBXNativeTarget "DarkCloudy" */;
 			buildPhases = (
-				AEF472F5ACD10F412DD48AD2 /* [CP] Check Pods Manifest.lock */,
 				34AD7F931FF3DE8600CA8D85 /* Sources */,
 				34AD7F941FF3DE8600CA8D85 /* Frameworks */,
 				34AD7F951FF3DE8600CA8D85 /* Resources */,
-				BFBFFC69DF07F6E3AA7C1813 /* [CP] Embed Pods Frameworks */,
-				7622989EC30086B7C1A9F336 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -509,12 +498,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 34AD7FB71FF3DE8600CA8D85 /* Build configuration list for PBXNativeTarget "DarkCloudyTests" */;
 			buildPhases = (
-				3090EED751F764797607196B /* [CP] Check Pods Manifest.lock */,
 				34AD7FA71FF3DE8600CA8D85 /* Sources */,
 				34AD7FA81FF3DE8600CA8D85 /* Frameworks */,
 				34AD7FA91FF3DE8600CA8D85 /* Resources */,
-				25BC58F66603EC9AF5105B17 /* [CP] Embed Pods Frameworks */,
-				E7CBD83E7111A0A5029D3C8C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -595,117 +581,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		25BC58F66603EC9AF5105B17 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-DarkCloudyTests/Pods-DarkCloudyTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
-				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DarkCloudyTests/Pods-DarkCloudyTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3090EED751F764797607196B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DarkCloudyTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7622989EC30086B7C1A9F336 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DarkCloudy/Pods-DarkCloudy-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AEF472F5ACD10F412DD48AD2 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DarkCloudy-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BFBFFC69DF07F6E3AA7C1813 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-DarkCloudy/Pods-DarkCloudy-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DarkCloudy/Pods-DarkCloudy-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E7CBD83E7111A0A5029D3C8C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DarkCloudyTests/Pods-DarkCloudyTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		34AD7F931FF3DE8600CA8D85 /* Sources */ = {
@@ -893,11 +768,14 @@
 		};
 		34AD7FB51FF3DE8600CA8D85 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF4040A42F46CCF4D568200E /* Pods-DarkCloudy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FNDVP9SLK2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/DarkCloudy/Support files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = git.scottmoon.DarkCloudy;
@@ -909,11 +787,14 @@
 		};
 		34AD7FB61FF3DE8600CA8D85 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C880842CB568D4647E0986A4 /* Pods-DarkCloudy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FNDVP9SLK2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/DarkCloudy/Support files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = git.scottmoon.DarkCloudy;
@@ -925,13 +806,16 @@
 		};
 		34AD7FB81FF3DE8600CA8D85 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C50793162B3B3E3A3208A356 /* Pods-DarkCloudyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FNDVP9SLK2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "DarkCloudyTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = git.scottmoon.DarkCloudyTests;
@@ -945,13 +829,16 @@
 		};
 		34AD7FB91FF3DE8600CA8D85 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0923B3A2FCDDD7789C9C5353 /* Pods-DarkCloudyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FNDVP9SLK2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "DarkCloudyTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = git.scottmoon.DarkCloudyTests;
