@@ -7,15 +7,17 @@ struct DayViewViewModel {
     private let timeFormatter = DateFormatter()
     
     var date: String {
+        // Configure Date Formatter
         dateFormatter.dateFormat = "EEE, MMMM d"
         
         return dateFormatter.string(from: weatherData.time)
     }
     
     var time: String {
+        // Configure Date Formatter
         timeFormatter.dateFormat = UserDefaults.getTimeNotation().timeFormat
         
-        return dateFormatter.string(from: weatherData.time)
+        return timeFormatter.string(from: weatherData.time)
     }
     
     var summery: String {
