@@ -27,7 +27,7 @@ class AddLocationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        viewModel = AddLocationViewViewModel(query: searchBar.rx.text.orEmpty.asDriver())
+        viewModel = AddLocationViewViewModel(query: searchBar.rx.text.orEmpty.asDriver(), locationService: Geocoder())
         
         viewModel.locations
             .drive(onNext: { [unowned self](_) in

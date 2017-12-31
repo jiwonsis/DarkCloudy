@@ -57,6 +57,8 @@
 		34B9E9131FF8D098000BE0E1 /* WeekViewViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B9E9121FF8D098000BE0E1 /* WeekViewViewModelTests.swift */; };
 		34D68EA51FF4E4FC00D3B178 /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D68EA41FF4E4FC00D3B178 /* JSONDecodable.swift */; };
 		34D68EA71FF4E54700D3B178 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D68EA61FF4E54700D3B178 /* WeatherData.swift */; };
+		34DBBFD51FF920AF00975466 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DBBFD41FF920AF00975466 /* LocationService.swift */; };
+		34DBBFD81FF9218A00975466 /* Geocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DBBFD71FF9218A00975466 /* Geocoder.swift */; };
 		34E90A221FF8D2E400DD2B81 /* WeatherDayViewViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E90A211FF8D2E400DD2B81 /* WeatherDayViewViewModelTests.swift */; };
 		34E90A251FF8DAD100DD2B81 /* AddLocationViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E90A241FF8DAD100DD2B81 /* AddLocationViewViewModel.swift */; };
 		3CBB8806422BE538C2E44203 /* Pods_DarkCloudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE9703AAB09B2931D58F2171 /* Pods_DarkCloudy.framework */; };
@@ -150,6 +152,8 @@
 		34B9E9121FF8D098000BE0E1 /* WeekViewViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekViewViewModelTests.swift; sourceTree = "<group>"; };
 		34D68EA41FF4E4FC00D3B178 /* JSONDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecodable.swift; sourceTree = "<group>"; };
 		34D68EA61FF4E54700D3B178 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		34DBBFD41FF920AF00975466 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		34DBBFD71FF9218A00975466 /* Geocoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geocoder.swift; sourceTree = "<group>"; };
 		34E90A211FF8D2E400DD2B81 /* WeatherDayViewViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDayViewViewModelTests.swift; sourceTree = "<group>"; };
 		34E90A241FF8DAD100DD2B81 /* AddLocationViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewViewModel.swift; sourceTree = "<group>"; };
 		742D28645CDA5B35F9D227AA /* Pods-DarkCloudyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DarkCloudyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DarkCloudyTests/Pods-DarkCloudyTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -203,6 +207,7 @@
 		34AD7F991FF3DE8600CA8D85 /* DarkCloudy */ = {
 			isa = PBXGroup;
 			children = (
+				34DBBFD61FF9215200975466 /* Services */,
 				34B9E8BD1FF4F254000BE0E1 /* Extensions */,
 				34D68EA31FF4E4EB00D3B178 /* protocols */,
 				34D68EA21FF4E4DB00D3B178 /* Models */,
@@ -472,8 +477,17 @@
 			isa = PBXGroup;
 			children = (
 				34D68EA41FF4E4FC00D3B178 /* JSONDecodable.swift */,
+				34DBBFD41FF920AF00975466 /* LocationService.swift */,
 			);
 			path = protocols;
+			sourceTree = "<group>";
+		};
+		34DBBFD61FF9215200975466 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				34DBBFD71FF9218A00975466 /* Geocoder.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		34E90A231FF8DAA300DD2B81 /* View Models */ = {
@@ -737,6 +751,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34B9E8BB1FF4EF95000BE0E1 /* WeekViewCell.swift in Sources */,
+				34DBBFD81FF9218A00975466 /* Geocoder.swift in Sources */,
 				34B9E8C11FF4F769000BE0E1 /* WeatherViewController.swift in Sources */,
 				34B9E8BF1FF4F26E000BE0E1 /* NSObject+DarkCloudy.swift in Sources */,
 				34B9E8F91FF8545B000BE0E1 /* SettingsViewTemperatureViewModel.swift in Sources */,
@@ -768,6 +783,7 @@
 				34B9E8F01FF8484A000BE0E1 /* UIImage+DarkCloudy.swift in Sources */,
 				34AD7FDC1FF3E52F00CA8D85 /* DayViewController.swift in Sources */,
 				34B9E8EB1FF7C2B2000BE0E1 /* LocationsViewLocationViewModel.swift in Sources */,
+				34DBBFD51FF920AF00975466 /* LocationService.swift in Sources */,
 				34B9E8F21FF84C10000BE0E1 /* WeekViewViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
