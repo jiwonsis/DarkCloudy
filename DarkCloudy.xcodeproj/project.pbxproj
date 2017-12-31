@@ -362,9 +362,9 @@
 		34B9E8E31FF6CBFC000BE0E1 /* Add Location View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				34E90A231FF8DAA300DD2B81 /* View Models */,
 				34B9E8DF1FF6CA97000BE0E1 /* AddLocationViewController.swift */,
 				34B9E8E01FF6CA97000BE0E1 /* AddLocationViewController.xib */,
+				34E90A231FF8DAA300DD2B81 /* View Models */,
 			);
 			path = "Add Location View Controller";
 			sourceTree = "<group>";
