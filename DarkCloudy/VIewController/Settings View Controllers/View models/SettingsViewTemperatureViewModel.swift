@@ -8,7 +8,7 @@ struct SettingsViewTemperatureViewModel {
         case .fahrenheit:
             return "Fahrenheit"
         case .celsius:
-            return "Celcius"
+            return "Celsius"
         }
     }
     
