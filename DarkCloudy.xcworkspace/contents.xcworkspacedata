@@ -5,6 +5,6 @@
       location = "group:DarkCloudy.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:JsonDataParser/JsonData.xcodeproj">
+      location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
