@@ -1,13 +1,4 @@
-//
-//  AddLocationViewController.swift
-//  DarkCloudy
-//
-//  Created by Scott moon on 30/12/2017.
-//  Copyright © 2017 Scott moon. All rights reserved.
-//
-
 import UIKit
-import CoreLocation
 
 protocol AddLocationViewControllerDelegate {
     func controller(_ controller: AddLocationViewController, didAddLocation location: Location)
@@ -19,24 +10,30 @@ class AddLocationViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    
+    var viewModel: AddLocationViewViewModel!
     
     // MARK: -
     
     var delegate: AddLocationViewControllerDelegate?
-    
-    // MARK: -
-    
-    private var locations: [Location] = []
-    
-    // MARK: -
-    
-    private lazy var geocoder = CLGeocoder()
     
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        viewModel = AddLocationViewViewModel()
+        viewModel.locationDidChange = { [unowned self] (locations) in
+            self.tableView.reloadData()
+        }
+        viewModel.queryingDidChange = { [unowned self] (querying) in
+            if querying {
+                self.activityIndicatorView.startAnimating()
+            } else {
+                self.activityIndicatorView.stopAnimating()
+            }
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -57,49 +54,6 @@ private extension AddLocationViewController {
         tableView.register(UINib(nibName: LocationViewCell.nibName, bundle: nil), forCellReuseIdentifier: LocationViewCell.reuseIdetifier())
     }
     
-    func geocode(addressString: String?) {
-        
-        guard let addressString = addressString else {
-            // Clear Locations
-            locations = []
-            
-            // Update Table View
-            tableView.reloadData()
-            
-            return
-        }
-        
-        // Geocode City
-        geocoder.geocodeAddressString(addressString) { [weak self] (placeMarks, error) in
-            DispatchQueue.main.async {
-                // Process Forward Geocoding Response
-                self?.processResponse(placeMarks: placeMarks, error: error)
-            }
-        }
-    }
-        
-    // MARK: -
-    func processResponse(placeMarks: [CLPlacemark]?, error: Error?) {
-        if let error = error {
-            print("Unable to Forward Geocode Address (\(error))")
-            return
-        }
-        
-        guard let matches = placeMarks else { return }
-        
-        // Update Locations
-        locations = matches.flatMap({ (match) -> Location? in
-            guard let name = match.name else { return nil }
-            guard let location = match.location else { return nil }
-            return Location(name: name, latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-        })
-        
-        // Update Table View
-        tableView.reloadData()
-        
-    }
-    
-    
 }
 
 private extension AddLocationViewController {
@@ -111,20 +65,16 @@ private extension AddLocationViewController {
 
 extension AddLocationViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return locations.count
+        return viewModel.numberOfLocations
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: LocationViewCell.reuseIdetifier(), for: indexPath) as? LocationViewCell else { fatalError("Unexpected Table View Cell") }
         
-        // Fetch Location
-        let location = locations[indexPath.row]
-        
-        // Create View Model
-        let viewModel = LocationsViewLocationViewModel(location: location.location, locationAsString: location.name)
-        
-        // Configure Table View Cell
-        cell.configureCell(viewModel: viewModel)
+        if let viewModel = viewModel.viewModelForLocation(index: indexPath.row) {
+            // Configure Table View Cell
+            cell.configureCell(viewModel: viewModel)
+        }
         
         return cell
     }
@@ -134,8 +84,7 @@ extension AddLocationViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        // Fetch Location
-        let location = locations[indexPath.row]
+        guard let location = viewModel.location(index: indexPath.row) else { return }
         
         // Notify Delegate
         delegate?.controller(self, didAddLocation: location)
@@ -150,11 +99,7 @@ extension AddLocationViewController: UISearchBarDelegate {
         // Hide Keyboard
         searchBar.resignFirstResponder()
         
-        // Clear Locations
-        locations = []
-        
-        // Update Table View
-        tableView.reloadData()
+        viewModel.query = searchBar.text ?? ""
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -162,6 +107,6 @@ extension AddLocationViewController: UISearchBarDelegate {
         searchBar.resignFirstResponder()
         
         // Forward Geocode Address String
-        geocode(addressString: searchBar.text)
+        viewModel.query = searchBar.text ?? ""
     }
 }
