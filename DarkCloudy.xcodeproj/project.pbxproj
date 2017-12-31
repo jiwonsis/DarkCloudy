@@ -59,6 +59,7 @@
 		34D68EA71FF4E54700D3B178 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D68EA61FF4E54700D3B178 /* WeatherData.swift */; };
 		34DBBFD51FF920AF00975466 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DBBFD41FF920AF00975466 /* LocationService.swift */; };
 		34DBBFD81FF9218A00975466 /* Geocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DBBFD71FF9218A00975466 /* Geocoder.swift */; };
+		34DBBFDA1FF9256800975466 /* AddLocationViewViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DBBFD91FF9256800975466 /* AddLocationViewViewModelTests.swift */; };
 		34E90A221FF8D2E400DD2B81 /* WeatherDayViewViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E90A211FF8D2E400DD2B81 /* WeatherDayViewViewModelTests.swift */; };
 		34E90A251FF8DAD100DD2B81 /* AddLocationViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E90A241FF8DAD100DD2B81 /* AddLocationViewViewModel.swift */; };
 		3CBB8806422BE538C2E44203 /* Pods_DarkCloudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE9703AAB09B2931D58F2171 /* Pods_DarkCloudy.framework */; };
@@ -154,6 +155,7 @@
 		34D68EA61FF4E54700D3B178 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		34DBBFD41FF920AF00975466 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		34DBBFD71FF9218A00975466 /* Geocoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geocoder.swift; sourceTree = "<group>"; };
+		34DBBFD91FF9256800975466 /* AddLocationViewViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewViewModelTests.swift; sourceTree = "<group>"; };
 		34E90A211FF8D2E400DD2B81 /* WeatherDayViewViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDayViewViewModelTests.swift; sourceTree = "<group>"; };
 		34E90A241FF8DAD100DD2B81 /* AddLocationViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewViewModel.swift; sourceTree = "<group>"; };
 		742D28645CDA5B35F9D227AA /* Pods-DarkCloudyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DarkCloudyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DarkCloudyTests/Pods-DarkCloudyTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -454,6 +456,7 @@
 			isa = PBXGroup;
 			children = (
 				34B9E9061FF8619D000BE0E1 /* SettingsViewTimeViewModelTests.swift */,
+				34DBBFD91FF9256800975466 /* AddLocationViewViewModelTests.swift */,
 				34B9E9081FF86638000BE0E1 /* SettingsViewUnitsViewModelTests.swift */,
 				34B9E90A1FF8678E000BE0E1 /* SettingsViewTemperatureViewModelTests.swift */,
 				34B9E9101FF86AED000BE0E1 /* DayViewViewModelTests.swift */,
@@ -794,6 +797,7 @@
 			files = (
 				34B9E9111FF86AED000BE0E1 /* DayViewViewModelTests.swift in Sources */,
 				34E90A221FF8D2E400DD2B81 /* WeatherDayViewViewModelTests.swift in Sources */,
+				34DBBFDA1FF9256800975466 /* AddLocationViewViewModelTests.swift in Sources */,
 				34B9E90F1FF869F5000BE0E1 /* XCTestCase+DarkCloudyTests.swift in Sources */,
 				34B9E9091FF86638000BE0E1 /* SettingsViewUnitsViewModelTests.swift in Sources */,
 				34B9E90B1FF8678E000BE0E1 /* SettingsViewTemperatureViewModelTests.swift in Sources */,
